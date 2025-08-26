@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-primary: #2563eb;
+	--color-primary-dark: #3b82f6;
+}
+
+*,
+body {
+	font-family: 'Nunito', sans-serif;
+}
