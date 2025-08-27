@@ -50,15 +50,27 @@ const Login = () => {
 					/>
 
 					{/* Additional Links */}
-					<p className="text-sm text-gray-600 text-center">
-						Don't have an account?{' '}
-						<a
-							href="/register"
-							className="text-blue-500 font-medium hover:underline"
-						>
-							Register here
-						</a>
-					</p>
+
+					<div className="flex flex-col space-y-2 mt-4">
+						<p className="text-sm text-gray-600 text-center">
+							Don't have an account?{' '}
+							<a
+								href="/register"
+								className="text-blue-500 font-medium hover:underline"
+							>
+								Register here
+							</a>
+						</p>
+
+						<p className="text-sm text-gray-600 text-center">
+							<a
+								href="/forgot-password"
+								className="text-blue-500 font-medium hover:underline"
+							>
+								Forgot Password?
+							</a>
+						</p>
+					</div>
 				</form>
 
 				<div className="flex items-center my-6">
