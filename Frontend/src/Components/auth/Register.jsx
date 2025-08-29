@@ -1,6 +1,8 @@
 import React from 'react';
+import { setTitle } from '../../CustomHook/Title';
 
 const Register = () => {
+	setTitle('Student Register');
 	return (
 		<div className="min-h-screen bg-background flex items-center justify-center px-4 py-20">
 			<div className="w-full max-w-md bg-surface p-8 rounded-2xl shadow-lg">

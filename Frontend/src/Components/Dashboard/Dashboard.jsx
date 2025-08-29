@@ -9,6 +9,7 @@ import {
 	Menu,
 	ChevronDown,
 } from 'lucide-react';
+import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
 	const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -21,15 +22,19 @@ const Dashboard = () => {
 	const toggleSubmenu = () => setSubmenuOpen(!submenuOpen);
 
 	const menuItems = [
-		{ icon: <Home className="w-5 h-5" />, label: 'Home' },
-		{ icon: <BarChart2 className="w-5 h-5" />, label: 'Analytics' },
+		{ icon: <Home className="w-5 h-5" />, label: 'Home', path: '/' },
+		{ icon: <BarChart2 className="w-5 h-5" />, label: 'Analytics', path: '/' },
 		{
 			icon: <Folder className="w-5 h-5" />,
 			label: 'Projects',
 			hasSubmenu: true,
 			submenu: ['Project 1', 'Project 2', 'Project 3'],
 		},
-		{ icon: <Settings className="w-5 h-5" />, label: 'Settings' },
+		{
+			icon: <Settings className="w-5 h-5" />,
+			label: 'Settings',
+			path: '/setting',
+		},
 	];
 	return (
 		<div className="flex h-screen bg-gray-100">
@@ -49,7 +54,8 @@ const Dashboard = () => {
 				<nav className="flex-1 p-2 space-y-1">
 					{menuItems.map((item) => (
 						<div key={item.label}>
-							<button
+							<Link
+								to={item.path}
 								onClick={() => {
 									setActiveTab(item.label);
 									if (item.hasSubmenu) toggleSubmenu();
@@ -71,7 +77,7 @@ const Dashboard = () => {
 										}`}
 									/>
 								)}
-							</button>
+							</Link>
 
 							{/* Submenu */}
 							{item.hasSubmenu && submenuOpen && sidebarOpen && (
@@ -138,16 +144,7 @@ const Dashboard = () => {
 
 				{/* Page Content */}
 				<main className="flex-1 p-6 overflow-y-auto">
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-						{[1, 2, 3, 4, 5, 6].map((card) => (
-							<div
-								key={card}
-								className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition-shadow hover:bg-blue-50"
-							>
-								Card {card}
-							</div>
-						))}
-					</div>
+					<Outlet />
 				</main>
 			</div>
 		</div>
