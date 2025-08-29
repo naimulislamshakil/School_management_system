@@ -8,6 +8,7 @@ import ResetPassword from './Components/auth/ResetPassword';
 import ParentRsgister from './Components/auth/ParentRsgister';
 import GeneralDashboard from './Components/Dashboard/GeneralDashboard';
 import AdmitionForm from './Components/Dashboard/StudentDashboard/AdmitionForm';
+import Fee from './Components/Dashboard/StudentDashboard/Fee';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Route path="/" element={<Dashboard />}>
 					<Route index element={<GeneralDashboard />} />
 					<Route path="/admission-form" element={<AdmitionForm />} />
+					<Route path="/fee" element={<Fee />} />
 				</Route>
 
 				<Route path="/login" element={<Login />} />
