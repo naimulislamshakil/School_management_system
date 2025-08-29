@@ -9,6 +9,7 @@ import ParentRsgister from './Components/auth/ParentRsgister';
 import GeneralDashboard from './Components/Dashboard/GeneralDashboard';
 import AdmitionForm from './Components/Dashboard/StudentDashboard/AdmitionForm';
 import Fee from './Components/Dashboard/StudentDashboard/Fee';
+import Profile from './Components/Dashboard/StudentDashboard/Profile';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route index element={<GeneralDashboard />} />
 					<Route path="/admission-form" element={<AdmitionForm />} />
 					<Route path="/fee" element={<Fee />} />
+					<Route path="/student-profile" element={<Profile />} />
 				</Route>
 
 				<Route path="/login" element={<Login />} />

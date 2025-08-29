@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { setTitle } from '../../../CustomHook/Title';
 import SelectField from '../../Common/SelectField';
+import { useNavigate } from 'react-router-dom';
 
 const AdmitionForm = () => {
+	const navigete = useNavigate();
+
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
@@ -39,6 +42,7 @@ const AdmitionForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log('Form Data:', formData);
+		navigete('/fee');
 		// Send data to backend API here
 	};
 	setTitle('AdMission Form');

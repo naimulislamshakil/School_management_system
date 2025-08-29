@@ -118,12 +118,12 @@ const Dashboard = () => {
 							</button>
 							{dropdownOpen && (
 								<div className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden z-10">
-									<a
-										href="#"
+									<Link
+										to="/student-profile"
 										className="block px-4 py-2 hover:bg-blue-100 text-gray-700"
 									>
 										Profile
-									</a>
+									</Link>
 									<a
 										href="#"
 										className="block px-4 py-2 hover:bg-blue-100 text-gray-700"
