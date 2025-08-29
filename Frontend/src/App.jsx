@@ -7,6 +7,7 @@ import ForgetPassword from './Components/auth/ForgetPassword';
 import ResetPassword from './Components/auth/ResetPassword';
 import ParentRsgister from './Components/auth/ParentRsgister';
 import GeneralDashboard from './Components/Dashboard/GeneralDashboard';
+import AdmitionForm from './Components/Dashboard/StudentDashboard/AdmitionForm';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Dashboard />}>
 					<Route index element={<GeneralDashboard />} />
+					<Route path="/admission-form" element={<AdmitionForm />} />
 				</Route>
 
 				<Route path="/login" element={<Login />} />
