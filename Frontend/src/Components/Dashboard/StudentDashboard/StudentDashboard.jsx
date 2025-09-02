@@ -63,7 +63,7 @@ const StudentDashboard = () => {
 		},
 	};
 	return (
-		<div>
+		<div className="container mx-auto">
 			<div className="min-h-screen  p-6">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{/* Student Profile Card */}

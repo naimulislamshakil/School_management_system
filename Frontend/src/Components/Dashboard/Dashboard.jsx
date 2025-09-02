@@ -8,6 +8,11 @@ import {
 	User,
 	Menu,
 	ChevronDown,
+	NotepadText,
+	ChartLine,
+	BookOpenCheck,
+	Landmark,
+	LibraryBig,
 } from 'lucide-react';
 import { Link, Outlet } from 'react-router-dom';
 
@@ -23,18 +28,47 @@ const Dashboard = () => {
 
 	const menuItems = [
 		{ icon: <Home className="w-5 h-5" />, label: 'Home', path: '/' },
-		{ icon: <BarChart2 className="w-5 h-5" />, label: 'Analytics', path: '/' },
 		{
-			icon: <Folder className="w-5 h-5" />,
-			label: 'Projects',
-			hasSubmenu: true,
-			submenu: ['Project 1', 'Project 2', 'Project 3'],
+			icon: <BarChart2 className="w-5 h-5" />,
+			label: 'Attendance Overview',
+			path: '/attendance-overview',
 		},
 		{
-			icon: <Settings className="w-5 h-5" />,
-			label: 'Settings',
-			path: '/setting',
+			icon: <NotepadText className="w-5 h-5" />,
+			label: 'Class Schedule',
+			path: '/class-schedule',
 		},
+		{
+			icon: <ChartLine className="w-5 h-5" />,
+			label: 'Grades & Report Cards',
+			path: '/report-cards',
+		},
+		{
+			icon: <BookOpenCheck className="w-5 h-5" />,
+			label: 'Homework & Assignments',
+			path: '/homework-assignments',
+		},
+		{
+			icon: <Landmark className="w-5 h-5" />,
+			label: 'Fee Status',
+			path: '/fee-status',
+		},
+		{
+			icon: <LibraryBig className="w-5 h-5" />,
+			label: 'Library Access',
+			path: '/library-access',
+		},
+		// {
+		// 	icon: <Folder className="w-5 h-5" />,
+		// 	label: 'Projects',
+		// 	hasSubmenu: true,
+		// 	submenu: ['Project 1', 'Project 2', 'Project 3'],
+		// },
+		// {
+		// 	icon: <Settings className="w-5 h-5" />,
+		// 	label: 'Settings',
+		// 	path: '/setting',
+		// },
 	];
 	return (
 		<div className="flex h-screen bg-gray-100">
